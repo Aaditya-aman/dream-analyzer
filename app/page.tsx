@@ -5,6 +5,8 @@ import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Card } from '@/components/ui/card';
 import { Brain, Loader2, Moon } from 'lucide-react';
+import { AuroraText } from '@/components/magicui/aurora-text';
+import { TextAnimate } from '@/components/magicui/text-animate';
 
 const emotions = [
   'Joy', 'Fear', 'Sadness', 'Anxiety',
@@ -58,12 +60,15 @@ export default function Home() {
       <div className="max-w-3xl mx-auto space-y-8">
         <div className="text-center space-y-4">
           <div className="flex items-center justify-center gap-2">
-            <Moon className="w-8 h-8 text-primary" />
-            <h1 className="text-4xl font-bold text-primary">Dream Analyzer</h1>
+            
+            <h1 className="text-8xl font-bold text-primary">Dream <AuroraText>Analyzer</AuroraText></h1>
           </div>
-          <p className="text-muted-foreground">
+          
+            {/* Share your dream and emotions to receive an insightful analysis */}
+            <TextAnimate animation="blurInUp" by="character" once className="text-muted-foreground">
             Share your dream and emotions to receive an insightful analysis
-          </p>
+            </TextAnimate>
+          
         </div>
 
         <Card className="p-6 space-y-6">

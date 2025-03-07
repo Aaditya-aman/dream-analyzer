@@ -31,7 +31,7 @@ export async function POST(request: Request) {
       ],
     });
     
-    const prompt = `Analyze this dream and provide insights about its potential meaning. Consider these emotions the dreamer felt: ${emotions.join(', ')}\n\nDream: ${dream}`;
+    const prompt = `Analyze this dream and provide insights about its potential meaning in less than 50 words. Consider these emotions the dreamer felt: ${emotions.join(', ')}\n\nDream: ${dream}`;
     
     const result = await model.generateContent(prompt);
     const response = await result.response;
