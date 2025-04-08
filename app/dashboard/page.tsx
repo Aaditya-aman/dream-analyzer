@@ -102,7 +102,7 @@ export default function Dashboard() {
           <p className="text-sm md:text-base text-muted-foreground">
             View and manage your recorded dreams
           </p>
-          <Button onClick={() => router.push('/')} className="mt-2">
+          <Button onClick={() => router.push('/analyze')} className="mt-2">
             <Book className="mr-2 h-4 w-4" />
             Record New Dream
           </Button>
@@ -119,7 +119,7 @@ export default function Dashboard() {
         ) : dreams.length === 0 ? (
           <Card className="p-6 text-center text-muted-foreground">
             <p>You haven't recorded any dreams yet.</p>
-            <Button onClick={() => router.push('/')} className="mt-4">
+            <Button onClick={() => router.push('/analyze')} className="mt-4">
               Record Your First Dream
             </Button>
           </Card>
